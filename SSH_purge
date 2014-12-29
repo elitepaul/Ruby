@@ -1,0 +1,28 @@
+class Connection
+
+ 	def initialize(commd)
+		@cmd = commd
+	end
+
+ def connect
+
+       require 'rubygems'
+       require 'net/ssh'
+
+    	@hostname = "server"
+    	@username = "username"
+    	@password = "password"
+    	#@cmd = commd
+
+    	begin
+         	ssh = Net::SSH.start(@hostname, @username, :password => @password)
+         	res = ssh.exec!(@cmd)
+         	ssh.close
+         	puts res
+         	rescue
+         	puts "Unable to connect to #{@hostname} using #{@username}/#{@password}"
+    	end
+   end
+end
+
+a = Connection.new("curl -X PURGE http://<ENV>/cs/v1/journal")
