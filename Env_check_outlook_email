@@ -1,0 +1,1025 @@
+#Test the environments links
+require 'mail'
+require "selenium-webdriver"
+
+#if a == "true" then puts "Selenuim webdriver loaded successfully" end 
+
+browser = Selenium::WebDriver.for :chrome 
+
+#1 QA01
+
+browser.get "http://qa01.eal.ol.wiley.com"
+
+if browser.title == "Wiley Online Library"
+
+puts browser.title
+
+   envqa01 = 'UP'
+   colorcdqa1 = 'background-color:lightgreen'
+   else  
+   envqa01 = 'Down'
+    colorcdqa1 = 'background-color:red'
+end
+
+#2 QA02
+
+browser.get "http://qa02.eal.ol.wiley.com" 
+
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqa02 = 'UP'
+   colorcdqa2 = 'background-color:lightgreen'
+   else  
+   envqa02 = 'Down'
+    colorcdqa2 = 'background-color:red'
+end
+
+#3 QA03
+
+browser.get "http://qa03.eal.ol.wiley.com" 
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqa03 = 'UP'
+   colorcdqa3 = 'background-color:lightgreen'
+   else  
+   envqa03 = 'Down'
+    colorcdqa3 = 'background-color:red'
+end
+
+#4 QA09
+
+browser.get "http://qa09.eal.ol.wiley.com" 
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqa09 = 'UP'
+   colorcdqa9 = 'background-color:lightgreen'
+   else  
+   envqa09 = 'Down'
+    colorcdqa9 = 'background-color:red'
+end
+
+#5 QA10
+
+browser.get "http://qa10.eal.ol.wiley.com" 
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqa10 = 'UP'
+   colorcdqa10 = 'background-color:lightgreen'
+   else  
+   envqa10 = 'Down'
+    colorcdqa10 = 'background-color:red'
+end
+
+#6 QAE
+
+browser.get "http://qae.onlinelibrary.wiley.com" 
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqae1 = 'UP'
+   colorcdqae1 = 'background-color:lightgreen'
+   else  
+   envqa0 = 'Down'
+    colorcdqae1 = 'background-color:red'
+end
+
+#7 QAF
+
+browser.get "http://qaf.onlinelibrary.wiley.com" 
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqaf = 'UP'
+   colorcdqaf = 'background-color:lightgreen'
+   else  
+   envqa0 = 'Down'
+    colorcdqaf = 'background-color:red'
+end
+
+#8 QAP
+
+browser.manage.timeouts.page_load = 10 #Seconds
+
+browser.get "http://qap.onlinelibrary.wiley.com" 
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqap1 = 'UP'
+   colorcdqap1 = 'background-color:lightgreen'
+   else  
+   envqap1 = 'Down'
+    colorcdqap1 = 'background-color:red'
+end
+
+#9 QAP2
+
+browser.manage.timeouts.page_load = 10 #Seconds
+
+browser.get "http://qap2.onlinelibrary.wiley.com" 
+puts browser.title
+
+if browser.title == "Wiley Online Library"
+
+   envqap2 = 'UP'
+   colorcdqap2 = 'background-color:lightgreen'
+   else  
+   envqap2 = 'Down'
+    colorcdqap2 = 'background-color:red'
+end
+
+#10 QA01 Marklogic
+
+browser.get "http://admin:admin@mlslice01.eal.wiley.com:8000/qconsole"
+
+if browser.title == "Query Console - MarkLogic"
+
+   envml1 = 'UP'
+   colorcdml1 = 'background-color:lightgreen'
+   else  
+   envml1 = 'Down'
+    colorcdml1 = 'background-color:red'
+end
+
+
+#10 QA02 Marklogic
+
+browser.get "http://query-console:query-console@mlslice02.eal.wiley.com:8000/qconsole"
+
+if browser.title == "Query Console - MarkLogic"
+
+   envml2 = 'UP'
+   colorcdml2 = 'background-color:lightgreen'
+   else  
+   envml2 = 'Down'
+    colorcdml2 = 'background-color:red'
+end
+
+#11 QA03 Marklogic
+
+browser.get "http://query-console:query-console@mlslice03.eal.wiley.com:8000/qconsole"
+
+if browser.title == "Query Console - MarkLogic"
+
+   envml3 = 'UP'
+   colorcdml3 = 'background-color:lightgreen'
+   else  
+   envml3 = 'Down'
+    colorcdml3 = 'background-color:red'
+end
+
+#12 QA09 Marklogic
+
+browser.get "http://query-console:query-console@mlslice09.wps.wiley.com:8000/qconsole"
+
+if browser.title == "Query Console - MarkLogic"
+
+   envml9 = 'UP'
+   colorcdml9 = 'background-color:lightgreen'
+   else  
+   envml9 = 'Down'
+    colorcdml9 = 'background-color:red'
+end
+
+
+#13 QAE\QAF Marklogic
+
+browser.get "http://query-console:query-console@olqaeml01.wiley.com:8000/qconsole/"
+
+if browser.title == "Query Console - MarkLogic"
+
+   envmlqae = 'UP'
+   colorcdmlqae = 'background-color:lightgreen'
+   else  
+   envmlqae = 'Down'
+    colorcdmlqae = 'background-color:red'
+end
+
+
+#14 Cochrane dotCMS environment
+
+browser.get "http://cochrane.fepqa.wiley.com/"
+
+if browser.title == "Cochrane Library"
+
+   envcochrane = 'UP'
+    colorcdcochrane = 'background-color:lightgreen'
+  
+   else  
+   envcochrane = 'Down'
+    colorcdcochrane = 'background-color:red'
+      puts browser.title
+end
+
+#15 JHP QA Site 
+
+browser.get "wol2hubs.qa.wiley.com:7280/agu"
+
+
+if browser.title == "AGU - Wiley Online Library"
+
+   envjhp = 'UP'
+    colorcdjhp = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envjhp = 'Down'
+    colorcdjhp = 'background-color:red'
+end
+
+#16 EHS Site QA Site 
+
+browser.get "http://ehs.qa.wiley.com"
+
+
+if browser.title == "Homepage - Economic History Society"
+
+   envehs = 'UP'
+    colorcdehs = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envcochrane = 'Down'
+    colorcdehs = 'background-color:red'
+end
+
+#16 IUPSYS Site QA Site 
+
+browser.get "http://iupsys.qa.wiley.com"
+
+if browser.title == "Homepage - International Union of Psychological Science"
+
+   enviupsys = 'UP'
+    colorcdiupsys = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envcochrane = 'Down'
+    colorcdiupsys = 'background-color:red'
+end
+
+#17 PSEGB site QA Site - Not working
+
+sleep 2
+#18 PSEGB site QA Site 
+
+browser.get "http://pesgb.qa.wiley.com"
+
+
+if browser.title == "Home - Philosophy of Education Society of Great Britain"
+
+   envpesgb = 'UP'
+    colorcdpesgb = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envcochrane = 'Down'
+    colorcdpesgb = 'background-color:red'
+      puts browser.title
+end
+
+
+#19 Agilezen Board Site 
+
+browser.get "https://agilezen.com/project/49911/board"
+
+
+if browser.title == "Log In - AgileZen"
+
+   envagilezen = 'UP'
+    colorcdagilezen = 'background-color:lightgreen'
+    
+   else  
+   envcochrane = 'Down'
+    colorcdagilezen = 'background-color:red'
+end
+
+#6 jira Ealing
+
+browser.get "http://jira.grt.wiley.com"
+
+
+if browser.title == "System Dashboard - JohnWiley and Sons JIRA"
+
+  jira = 'UP'
+  colorjira = 'background-color:lightgreen'
+    else 
+  jira = 'Down'
+  colorjira = 'background-color:red'
+end
+
+#19 JIRA – US Instance
+
+browser.get "http://jira.wiley.com"
+
+
+if browser.title == "Content Tech [Jenkins]"
+
+   envjiraus = 'UP'
+    colorcdjiraus = 'background-color:lightgreen'
+    
+   else  
+   envjiraus = 'Down'
+    colorcdjiraus = 'background-color:red'
+end
+
+#20 JIRA – Russia Instance
+
+browser.get "http://jira.wiley.ru"
+
+
+if browser.title == "System Dashboard - WWL Jira System"
+
+   envjiraru = 'UP'
+    colorcdjiraru = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envjiraru = 'Down'
+    colorcdjiraru = 'background-color:red'
+end
+
+
+#20 Rational
+
+browser.get "https://vmrqm.wiley.com/qm/web/console"
+
+if browser.title == "https://vmrqm.wiley.com/qm/web/console"
+
+
+   envrat = 'UP'
+    colorcdrat = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envrat = 'Down'
+    colorcdrat = 'background-color:red'
+end
+
+  
+#21 SQA Shared Drive
+
+browser.get "/\/\hob-fs01.wiley.com/\Software Quality Assurance/\SQA Functional Testing/\GR"
+
+title = browser.title
+
+cleantitle = title[11,18]
+
+if cleantitle == "hob-fs01.wiley.com"
+
+   envishareddr = 'UP'
+    colorcdshdr = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envishareddr = 'Down'
+    colorcdshdr = 'background-color:red'
+end
+
+
+#22 JAS Apps Download Link
+
+browser.get "http://demo.wiley.ru/mobile/jas/"
+
+
+if browser.title == "Wiley JAS Apps"
+
+   envjas = 'UP'
+    colorcdjas = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   envjas = 'Down'
+    colorcdjas = 'background-color:red'
+end
+
+#22 Wordpress Link
+
+browser.get "http://blogs.wiley.com/jas-config-manager/wp-admin"
+puts browser.title
+
+if browser.title == "JAS Config Manager › Log In"
+
+   envwp = 'UP'
+    colorcdwp = 'background-color:lightgreen'
+   else  
+   envwp = 'Down'
+    colorcdwp = 'background-color:red'
+end
+
+
+#23 Sharepoint Portal
+
+browser.get "http://portal.wiley.com"
+
+
+if browser.title == "default"
+
+   enviportal = 'UP'
+    colorcdportal = 'background-color:lightgreen'
+    puts browser.title
+   else  
+   enviportal = 'Down'
+    colorcdportal = 'background-color:red'
+end
+
+sleep 2
+#24 Perfecto Mobile
+
+browser.get "http://wiley.perfectomobile.com/nexperience"
+
+
+if browser.title == "MobileCloud Sign in"
+puts browser.title
+
+   enviper = 'UP'
+    colorcdper = 'background-color:lightgreen'
+   
+   else  
+   enviper = 'Down'
+    colorcdper = 'background-color:red'
+end
+
+sleep 1
+#25 WALS
+
+browser.get "http://authorlicenseqa.wiley.com/home"
+puts browser.title
+
+if browser.title == "Article List"
+
+   envwals = 'UP'
+    colorcdwals = 'background-color:lightgreen'
+ 
+   else  
+   envwals = 'Down'
+    colorcdwals = 'background-color:red'
+end
+
+
+#25 OO
+
+browser.get "http://10.6.6.91:8080/home?57"
+puts browser.title
+
+if browser.title == "Authentication"
+
+   envoo = 'UP'
+    colorcdoo = 'background-color:lightgreen'
+    
+   else  
+   envoo = 'Down'
+    colorcdoo = 'background-color:red'
+end
+
+
+#26 Funder Dashboard
+
+browser.get "http://vmdotcmsqa01.wiley.com:8080/app/funderlogin/funderdb/login/html"
+puts browser.title
+
+if browser.title == "Funder Dashboard"
+
+   envfd = 'UP'
+    colorcdfd = 'background-color:lightgreen'
+    
+   else  
+   envfd = 'Down'
+    colorcdfd = 'background-color:red'
+end
+
+
+#27 FD Admin
+
+browser.get "http://woadashboardqa.wiley.com/admin"
+puts browser.title
+
+if browser.title == "Access Denied Page"
+
+   envfdadmin = 'UP'
+    colorcdfdadmin = 'background-color:lightgreen'
+   else  
+   envfdadmin = 'Down'
+    colorcdfdadmin = 'background-color:red'
+end
+
+
+#28 Automation Dashboard
+
+browser.get "http://portal.wiley.com/sites/projects3/automationdashboard/Pages/Online_Automation_Dashboard.aspx"
+puts browser.title
+
+if browser.title == "Online Automation Dashboard"
+
+   envauto = 'UP'
+    colorcdauto = 'background-color:lightgreen'
+    
+   else  
+   envauto = 'Down'
+    colorcdauto = 'background-color:red'
+end
+
+
+#1 QAE
+browser.manage.timeouts.page_load = 10 #Seconds
+
+browser.get "http://qae.onlinelibrary.wiley.com/enhanced/doi/10.1002/14651858.CD001364.pub4"
+
+if browser.title == "Zinc for the common cold - Singh - 2013 - Cochrane Database of Systematic Reviews - Wiley Online Library"
+  #puts "QAE works"
+  envqae = 'UP'
+  colorcdqae = 'background-color:lightgreen'
+else
+  puts "QAE is down"
+  colorcdqae = 'background-color:red'
+ 
+  envqae = 'Down'
+  
+end
+
+
+#2 QA09
+
+browser.manage.timeouts.page_load = 10 #Seconds
+
+browser.get "http://qa09.eal.ol.wiley.com/enhanced/doi/10.1111/acfi.12029"
+
+if browser.title == "Organisational and professional commitment of early career accountants: do mentoring and organisational ethical climate matter? - McManus - 2013 - Accounting & Finance - Wiley Online Library"
+
+   envqa09 = 'UP'
+   colorcdqa9 = 'background-color:lightgreen'
+   else  
+   envqa09 = 'Down'
+    colorcdqa9 = 'background-color:red'
+end
+
+#3 OXF Journal
+
+browser.manage.timeouts.page_load = 10 #Seconds
+
+browser.get "http://oxf-as-dotcmsdev01.wiley.com:9080/enhanced/doi/10.1002/ange.201108700/"
+
+#puts browser.title
+
+if browser.title == "Protein Subunits Released by Surface Collisions of Noncovalent Complexes: Nativelike Compact Structures Revealed by Ion Mobility Mass Spectrometry - Zhou - 2012 - Angewandte Chemie - Wiley Online Library"
+
+  envoxf1 = 'UP'
+  colorcdoxf = 'background-color:lightgreen'
+    else 
+  envoxf1 = 'Down'
+  colorcdoxf = 'background-color:red'
+end
+
+#4 OXF CDSR
+sleep 2
+
+browser.manage.timeouts.page_load = 10 #Seconds
+
+browser.get "http://oxf-as-dotcmsdev01.wiley.com:9080/enhanced/doi/10.1002/14651858.CD002824.pub2"
+
+#puts browser.title
+
+if browser.title == "Intra‐articular steroids and splints/rest for children with juvenile idiopathic arthritis and adults with rheumatoid arthritis - Wallen - 2006 - Cochrane Database of Systematic Reviews - Wiley Online Library"
+
+  envoxf2 = 'UP'
+  colorcdoxfcdsr = 'background-color:lightgreen'
+    else 
+  envoxf2 = 'Down'
+  colorcdoxfcdsr = 'background-color:red'
+end
+=end
+#5 QAP
+
+sleep 3
+
+browser.manage.timeouts.page_load = 10 #Seconds
+
+browser.get "http://qap.onlinelibrary.wiley.com/enhanced/doi/10.1111/1911-3838.12005/"
+
+if browser.title == "The Effect of Reversibility on a Manager's Decision to Record Asset Impairments - Trottier - 2013 - Accounting Perspectives - Wiley Online Library"
+
+  envqap = 'UP'
+  colorcdqap = 'background-color:lightgreen'
+    else 
+  envqap = 'Down'
+  colorcdqap = 'background-color:red'
+end
+
+#6 jira
+
+browser.get "http://jira.grt.wiley.com"
+
+
+if browser.title == "System Dashboard - JohnWiley and Sons JIRA"
+
+  jira = 'UP'
+  colorjira = 'background-color:lightgreen'
+    else 
+  jira = 'Down'
+  colorjira = 'background-color:red'
+end
+browser.close
+
+# Creating object for time variable and adding it to email message
+
+currenttime = Time.new
+
+# Sending email via outlook
+require 'win32ole'
+@outlook = WIN32OLE.new('Outlook.Application')
+email = @outlook.CreateItem(0)
+email.Subject = 'Environments Status Summary - ' + currenttime.strftime("%d/%m/%Y %H:%M:%S")
+#email.Body = 'Things will be rolling if this message reaches!!!'
+#email.content-type: html
+
+#Email body should be in HTML format
+
+email.HTMLBody = '
+<html>
+<head>
+<style>
+table,th,td
+{
+border:2px solid black;
+border-collapse:collapse;
+h3 {color:blue}
+}
+</style>
+</head>
+<body>
+
+<table style="width:300px" cellpadding = "5" cellspacing = "5">
+<tr>
+ 
+  <td><b><mark> Environment</mark></b></td>
+  <td><b><mark> Status </mark></b></td>  
+  <td><b><mark> URL </mark></b></td> 
+  <td><b><mark> Comments </mark></b></td>
+  <td><b><mark> Start </mark></b></td>
+  <td><b><mark> Finish </mark></b></td>
+  <td><b><mark> Duration </mark></b></td>
+  
+</tr>
+<tr>
+  <td>QA01 </td>
+  <td><p style="'"#{colorcdqa1}"'"> '"#{envqa01}"'</p></td> 
+  <td>http://qa01.eal.ol.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QA02 </td>
+  <td><p style="'"#{colorcdqa2}"'"> '"#{envqa02}"'</p></td> 
+  <td>http://qa02.eal.ol.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QA03 </td>
+  <td><p style="'"#{colorcdqa3}"'"> '"#{envqa03}"'</p></td> 
+  <td>http://qa03.eal.ol.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QA10</td>
+  <td><p style="'"#{colorcdqa10}"'"> '"#{envqa10}"'</p></td> 
+  <td>http://qa10.eal.ol.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QAE</td>
+  <td><p style="'"#{colorcdqae}"'"> '"#{envqae1}"'</p></td> 
+  <td>http://qae.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QAF</td>
+  <td><p style="'"#{colorcdqaf}"'"> '"#{envqaf}"'</p></td> 
+  <td>http://qaf.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QAP</td>
+  <td><p style="'"#{colorcdqap1}"'"> '"#{envqap1}"'</p></td> 
+  <td>http://qap.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QAP2</td>
+  <td><p style="'"#{colorcdqap2}"'"> '"#{envqap2}"'</p></td> 
+  <td>http://qap2.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QA01 Marklogic </td>
+  <td><p style="'"#{colorcdml1}"'"> '"#{envml1}"'</p></td> 
+  <td>http://qap2.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QA02 Marklogic </td>
+  <td><p style="'"#{colorcdml2}"'"> '"#{envml2}"'</p></td> 
+  <td>http://qap2.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QA03 Marklogic </td>
+  <td><p style="'"#{colorcdml3}"'"> '"#{envml3}"'</p></td> 
+  <td>http://qap2.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QA09 Marklogic </td>
+  <td><p style="'"#{colorcdml9}"'"> '"#{envml9}"'</p></td> 
+  <td>http://qap2.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>QAE/QAF Marklogic </td>
+  <td><p style="'"#{colorcdmlqae}"'"> '"#{envmlqae}"'</p></td> 
+  <td>http://qap2.onlinelibrary.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Cochrane dotCMS environment</td>
+  <td><p style="'"#{colorcdcochrane}"'"> '"#{envcochrane}"'</p></td> 
+  <td>http://cochrane.fepqa.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>JHP QA Site</td>
+  <td><p style="'"#{colorcdjhp}"'"> '"#{envjhp}"'</p></td> 
+  <td>http://wol2hubs.qa.wiley.com:7280/agu/td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>EHS QA Site</td>
+  <td><p style="'"#{colorcdehs}"'"> '"#{envehs}"'</p></td> 
+  <td>http://ehs.qa.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>IUPSYS QA Site</td>
+  <td><p style="'"#{colorcdiupsys}"'"> '"#{enviupsys}"'</p></td> 
+  <td>http://iupsys.qa.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>PESGB QA Site</td>
+  <td><p style="'"#{colorcdpesgb}"'"> '"#{envpesgb}"'</p></td> 
+  <td>http://pesgb.qa.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Agilezen Board Site</td>
+  <td><p style="'"#{colorcdagilezen}"'"> '"#{envagilezen}"'</p></td> 
+  <td>https://agilezen.com/project/49911/board</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Jira Ealing</b></td>
+  <td><p style="'"#{colorjira}"'">'"#{jira}"'</p></td>    
+  <td>http://jira.grt.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Jira US Instance</b></td>
+  <td><p style="'"#{colorcdjiraus}"'">'"#{envjiraus}"'</p></td>    
+  <td>http://jira.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Jira Russia Instance</b></td>
+  <td><p style="'"#{colorcdjiraru}"'">'"#{envjiraru}"'</p></td>    
+  <td>http://jira.wiley.ru</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Rational</b></td>
+  <td><p style="'"#{colorcdrat}"'">'"#{envrat}"'</p></td>    
+  <td>https://vmrqm.wiley.com/qm/web/console</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>SQA Shared Drive</b></td>
+  <td><p style="'"#{colorcdshdr}"'">'"#{envishareddr}"'</p></td>    
+  <td>//hob-fs01.wiley.com/Software Quality Assurance/SQA Functional Testing/GR</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>JAS Apps Download Link</b></td>
+  <td><p style="'"#{colorcdjas}"'">'"#{envjas}"'</p></td>    
+  <td>http://demo.wiley.ru/mobile/jas/</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Wordpress Link</b></td>
+  <td><p style="'"#{colorcdwp}"'">'"#{envwp}"'</p></td>    
+  <td>http://blogs.wiley.com/jas-config-manager/wp-admin</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Sharepoint Portal</b></td>
+  <td><p style="'"#{colorcdportal}"'">'"#{enviportal}"'</p></td>    
+  <td>http://portal.wiley.com</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Perfecto Mobile</b></td>
+  <td><p style="'"#{colorcdper}"'">'"#{enviper}"'</p></td>    
+  <td>http://wiley.perfectomobile.com/nexperience</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>WALS</b></td>
+  <td><p style="'"#{colorcdwals}"'">'"#{envwals}"'</p></td>    
+  <td>http://authorlicenseqa.wiley.com/home</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>OnlineOpen</b></td>
+  <td><p style="'"#{colorcdoo}"'">'"#{envoo}"'</p></td>    
+  <td>http://10.6.6.91:8080/home?57</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Funder Dashboard</b></td>
+  <td><p style="'"#{colorcdfd}"'">'"#{envfd}"'</p></td>    
+  <td>http://vmdotcmsqa01.wiley.com:8080/app/funderlogin/funderdb/login/html</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>FD Admin</b></td>
+  <td><p style="'"#{colorcdfdadmin}"'">'"#{envfdadmin}"'</p></td>    
+  <td>http://woadashboardqa.wiley.com/admin</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Automation Dashboard</b></td>
+  <td><p style="'"#{colorcdauto}"'">'"#{envauto}"'</p></td>    
+  <td>http://portal.wiley.com/sites/projects3/automationdashboard/Pages/Online_Automation_Dashboard.aspx</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>WOL 2.0 QA09 Dotcms</td>
+  <td><p style="'"#{colorcdqa9}"'"> '"#{envqa09}"'</p></td> 
+  <td>http://qa09.eal.ol.wiley.com/enhanced/doi/10.1111/acfi.12036/</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>WOL 2.0 QAE Dotcms</b></td>
+  <td><p style="'"#{colorcdqae}"'">'"#{envqae}"'</p></td>   
+  <td>http://qae.onlinelibrary.wiley.com/enhanced/doi/10.1002/14651858.CD001364.pub4</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>WOL 2.0 QAP Dotcms</b></td>
+  <td><p style="'"#{colorcdqap}"'">'"#{envqap}"'</p></td>    
+  <td>http://qap.onlinelibrary.wiley.com/enhanced/doi/10.1111/1911-3838.12005/</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>WOL 2.0 OXF-AA Article Dotcms</b></td>
+  <td><p style="'"#{colorcdoxf}"'">'"#{envoxf1}"'</p></td>    
+  <td>http://oxf-as-dotcmsdev01.wiley.com:9080/enhanced/doi/10.1002/ange.201108700/</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>WOL 2.0 OXF-CDSR Article Dotcms</b></td>
+  <td><p style="'"#{colorcdoxfcdsr}"'">'"#{envoxf1}"'</p></td>    
+  <td>http://oxf-as-dotcmsdev01.wiley.com:9080/enhanced/doi/10.1002/14651858.CD002824.pub2</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+
+
+
+</table>
+
+</body>
+</html>'
+
+email.To = 'chetanpaul1@gmail.com'
+email.Recipients.Add 'additional receipient'
+
+#For adding any attachments to email
+#email.Attachments.Add('C:/personal/Ruby/wol2environments.txt', 1)
+
+email.Save
+email.Send
